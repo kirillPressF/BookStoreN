@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: "bookstoreDb"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "7777777k"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  postgres-data:
